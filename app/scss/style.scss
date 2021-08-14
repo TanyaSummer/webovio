@@ -4,3 +4,42 @@
 @import 'global';/*что я пишу для body, для ссылок и т.д*/
 @import 'media'; /*медиазапросы*/
 
+.header{
+  background-image: url('../images/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 24px 0 211px;
+}
+.header-top{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 121px;
+}
+.menu__btn{
+  border: none;
+  background-color: transparent;
+}
+.header-content{
+  max-width: 581px;
+  &__map{
+    color:$white;
+    padding-bottom: 22px;
+    font-size: 14px;
+  }
+  &__title{
+    color:$white;
+    padding-bottom: 24px;
+    font-size: 60px;
+    line-height: 74px;
+  }
+  &__subtitle{
+    color:$white;
+    padding-bottom: 45px;
+    line-height: 16px;
+  }
+  &__connect{
+    color: #FFD723;
+    text-decoration: underline;
+  }
+}
