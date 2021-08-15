@@ -1,5 +1,7 @@
 $default:#21384299;
 $white: #fff;
+$text: #213842;
+$grey:#4D533C;
 
 
 %poppins-400{
@@ -8,13 +10,13 @@ $white: #fff;
 }
 %poppins-500{
   font-family: 'Poppins-Medium', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 %poppins-600{
   font-family: 'Poppins-SemiBold', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 %poppins-700{
   font-family: 'Poppins-Bold', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
 }

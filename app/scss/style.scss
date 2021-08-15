@@ -12,16 +12,58 @@
   padding: 24px 0 211px;
 }
 .header-top{
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 121px;
+  position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient( #262525, transparent);
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
 }
-.menu__btn{
-  border: none;
-  background-color: transparent;
+.menu{
+  &__btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+  &__box{
+    transform: translateX(200%);
+    position: fixed;
+    width: 320px;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    display: block;
+    transition: all .3s;
+    background-color: rgba(32, 32, 32, 0.35);
+    box-shadow: -30px 0 49px rgba(0, 0, 0, 0.4);
+    &.menu__box--active{
+      transform: translateX(0%);
+      transition: all .3s;
+    }
+  }
+  .menu__list{
+    padding: 80px;
+    text-align: center;
+  }
+  &__list-item{
+    padding: 7px 0;
+  }
+  &__list-link{
+    color: $white;
+  }
 }
 .header-content{
-  max-width: 581px;
+  &__box{
+    max-width: 581px;
+  padding-top: 121px;
+  }
   &__map{
     color:$white;
     padding-bottom: 22px;
@@ -43,3 +85,149 @@
     text-decoration: underline;
   }
 }
+.about{
+  position: relative;
+  &__top{
+    position: absolute;
+    top: -103px;
+    left: 190px;
+    right: 0;
+    background-color: $white;
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+    padding: 55px 140px 55px 65px;
+    img+img{
+      padding-left: 66px;
+    }
+  }
+  &__top-inner{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 55px;
+  }
+  &__bottom{
+    padding-top: 224px;
+    padding-bottom: 150px;
+  }
+  &__bottom-inner{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__bottom-content{
+    max-width: 475px;
+    
+  }
+  &__bottom-subtitle{
+    margin-bottom: 30px;
+    color: $grey;
+  }
+  &__bottom-text{
+    margin-bottom: 18px;
+  }
+ 
+  &__bottom-info{
+    max-width: 475px;
+    max-height: 650px;
+    box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.145947);
+    padding: 224px 8px 0px 40px;
+    position: absolute;
+    top: -224px;
+    // left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &__bottom-author{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom-author-box__title{
+    color: $grey;
+    font-size: 22px;
+    line-height: 33px;
+    @extend %poppins-700;
+  }
+  &__bottom-author-box__text{
+    color: #152934;
+    ;
+  }
+}
+.progect{
+  margin-top: 150px;
+  &__title,
+  &__text{
+    max-width: 445px;
+  }
+}
+.progect-item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.progect-box{
+  background-repeat: no-repeat;
+  background-size: 50%;
+  
+  position: relative;
+  margin-bottom: 172px;
+  &__first{
+    background-image: url('../images/progect/1.png');
+    background-position: left center;
+  }
+  &__second{
+    background-image: url('../images/progect/2.png');
+    background-position: right center;
+  }
+  &__third{
+    background-image: url('../images/progect/3.png');
+    background-position: left center;
+  }
+  &__inner{
+    max-width: 538px;
+    margin-left: auto;
+    padding: 80px 30px 0 95px;
+  }
+  &__inner-second{
+    max-width: 538px;
+    padding: 80px 30px 0 95px;
+    // position: relative;
+  }
+  &__text p{
+      margin-bottom: 30px;
+  }
+  &__link{
+    margin-top: 60px;
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+
+  &__info{
+    position: absolute;
+    top: 374px;
+    left: 323px;
+    right: 0;
+    background-color: $white;
+    padding: 30px;
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+    border-radius: 8px;
+    max-width: 456px;
+    max-height: 285px;
+  }
+  &__info__second{
+    top: 350px;
+    left: 665px;
+    right: 0;
+  }
+  &__blockquote{
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &__author{
+    display: flex;
+  }
+  &__author-about__title{
+    @extend %poppins-700;
+  }
+}
+
+
