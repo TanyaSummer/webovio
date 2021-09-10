@@ -41,11 +41,11 @@
     height: 100vh;
     display: block;
     transition: all .3s;
-    background-color: rgba(32, 32, 32, 0.35);
+    background-color: rgba(97, 107, 83, 1);
     box-shadow: -30px 0 49px rgba(0, 0, 0, 0.4);
     &.menu__box--active{
       transform: translateX(0%);
-      transition: all .3s;
+      transition: all .8s;
     }
   }
   .menu__list{
@@ -94,15 +94,23 @@
     right: 0;
     background-color: $white;
     box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
-    padding: 55px 140px 55px 65px;
-    img+img{
-      padding-left: 66px;
-    }
+    max-width: 1276px;
+    height: 227px;
+    // padding: 0px 166px 0px 65px;
+    // img+img{
+    //   padding-left: 66px;
+    // }
   }
-  &__top-inner{
+  &__top-list{
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    gap: 56px;
+    height: 227px;
+    align-items: center;
+  }
+  
+  &__top-item:first-child{
+    padding-left: 65px;
   }
   &__bottom{
     padding-top: 224px;
@@ -306,7 +314,7 @@
     border-bottom: 1px solid #5D6544;
   }
   &__phone-text,
-  &__adress-text,{
+  &__adress-text{
     color: white;
   }
   &__phone-title,
@@ -344,4 +352,4 @@
   margin-top: 25px;
 }
 
-
+@import 'media'; /*медиазапросы*/
