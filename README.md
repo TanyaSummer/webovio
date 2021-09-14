@@ -1,3 +1,3 @@
 # webovio
 portfolio project 
-site is published at https://tanyasummer.github.io/webovio/
+site is published at http://webovio.s89299lm.beget.tech/
